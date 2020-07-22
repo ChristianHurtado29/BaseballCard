@@ -15,6 +15,7 @@
 		13AFCA7B24C8A10B003ECE7D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13AFCA7924C8A10B003ECE7D /* LaunchScreen.storyboard */; };
 		13AFCA8624C8A10C003ECE7D /* BaseballCardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13AFCA8524C8A10C003ECE7D /* BaseballCardTests.swift */; };
 		13AFCA9124C8A10C003ECE7D /* BaseballCardUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13AFCA9024C8A10C003ECE7D /* BaseballCardUITests.swift */; };
+		13AFCA9F24C8A582003ECE7D /* LineUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13AFCA9E24C8A582003ECE7D /* LineUpVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		13AFCA8C24C8A10C003ECE7D /* BaseballCardUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BaseballCardUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		13AFCA9024C8A10C003ECE7D /* BaseballCardUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseballCardUITests.swift; sourceTree = "<group>"; };
 		13AFCA9224C8A10C003ECE7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		13AFCA9E24C8A582003ECE7D /* LineUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineUpVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				13AFCA6E24C8A10A003ECE7D /* AppDelegate.swift */,
 				13AFCA7024C8A10A003ECE7D /* SceneDelegate.swift */,
 				13AFCA7224C8A10A003ECE7D /* ViewController.swift */,
+				13AFCA9E24C8A582003ECE7D /* LineUpVC.swift */,
 				13AFCA7424C8A10A003ECE7D /* Main.storyboard */,
 				13AFCA7724C8A10B003ECE7D /* Assets.xcassets */,
 				13AFCA7924C8A10B003ECE7D /* LaunchScreen.storyboard */,
@@ -262,6 +265,7 @@
 				13AFCA7324C8A10A003ECE7D /* ViewController.swift in Sources */,
 				13AFCA6F24C8A10A003ECE7D /* AppDelegate.swift in Sources */,
 				13AFCA7124C8A10A003ECE7D /* SceneDelegate.swift in Sources */,
+				13AFCA9F24C8A582003ECE7D /* LineUpVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

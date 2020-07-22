@@ -15,9 +15,14 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = .systemGreen
+        self.navigationItem.title = "PLAY BALL"
         backgroundView.image = UIImage(named: "BaseballBackground")
     }
 
-
+    @IBAction func beginButton(_ sender: UIButton) {
+        
+    }
+    
 }
 

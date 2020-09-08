@@ -15,6 +15,9 @@ enum TeamState {
 
 class LineUpVC: UIViewController {
     
+    var homePlayers = [String]()
+    var awayPlayers = [String]()
+    
     @IBOutlet weak var firstBatter: UITextField!
     @IBOutlet weak var secondBatter: UITextField!
     @IBOutlet weak var thirdBatter: UITextField!
@@ -24,28 +27,41 @@ class LineUpVC: UIViewController {
     @IBOutlet weak var seventhBatter: UITextField!
     @IBOutlet weak var eighthBatter: UITextField!
     @IBOutlet weak var ninthBatter: UITextField!
+    @IBOutlet weak var playBallOut: UIBarButtonItem!
+    
     
     @IBOutlet weak var lineNums: UILabel!
     
     @IBOutlet weak var backgroundImage:UIImageView!
     
     private var teamState: TeamState = .home
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         teamState = .home
+        configureNavBar()
         backgroundImage.image = UIImage(named: "LineupBackground")
         configureTextDel()
         configureLineup()
         configureTeamColor()
+        playBallOut.title = ""
     }
     
     @IBAction func submitOrder(_ sender: UIButton) {
         teamState = .away
         configureTeamColor()
         configureLineup()
+        configureNavBar()
+        clearLine()
     }
     
+    private func configureNavBar(){
+        if teamState == .home{
+            navigationItem.title = "Enter Home Team Order"
+        } else {
+            navigationItem.title = "Enter Away Team Order"
+        }
+    }
     
     private func configureTeamColor(){
         if teamState == .home{
@@ -91,11 +107,29 @@ class LineUpVC: UIViewController {
         ninthBatter.delegate = self
     }
     
-
+    private func clearLine(){
+        firstBatter.text = .none
+        secondBatter.text = .none
+        thirdBatter.text = .none
+        fourthBatter.text = .none
+        fifthBatter.text = .none
+        sixthBatter.text = .none
+        seventhBatter.text = .none
+        eighthBatter.text = .none
+        ninthBatter.text = .none
+    }
+    
 }
 
 extension LineUpVC: UITextFieldDelegate{
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if teamState == .home{
+            homePlayers.append(textField.text ?? "no entry")
+            print(homePlayers)
+        } else {
+            awayPlayers.append(textField.text ?? "no entry")
+            print(awayPlayers)
+        }
         textField.resignFirstResponder()
         return true
     }

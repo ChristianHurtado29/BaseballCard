@@ -27,6 +27,7 @@ enum Inning{
 
 class GameViewController: UIViewController {
     
+//===============Game State=======================
     var state: TopBottom = .Top
     var inning: Inning = .First
     var onBase = 0
@@ -36,14 +37,14 @@ class GameViewController: UIViewController {
     var homeRuns = 0
     var awayTotal = [Int]()
     var homeTotal = [Int]()
-    //    var awayRuns = [Int]()
-    //    var homeRuns = [Int]()
-    
+
+//===============Base Images=======================
     @IBOutlet weak var homeImage: UIImageView!
     @IBOutlet weak var firstBaseImage: UIImageView!
     @IBOutlet weak var secondBaseImage: UIImageView!
     @IBOutlet weak var thirdBaseImage: UIImageView!
-    
+
+//===============Innings Scores=======================
     @IBOutlet weak var topFirst: UILabel!
     @IBOutlet weak var bottomFirst: UILabel!
     @IBOutlet weak var topSecond: UILabel!
@@ -65,7 +66,8 @@ class GameViewController: UIViewController {
     
     @IBOutlet weak var awayScore: UILabel!
     @IBOutlet weak var homeScore: UILabel!
-    
+
+//===============Live Gameplay=======================
     @IBOutlet weak var nowBattingLabel: UILabel!
     @IBOutlet weak var playerLabel: UILabel!
     
@@ -225,6 +227,8 @@ class GameViewController: UIViewController {
                     inning = .Eigth
                 } else if inning == .Eigth{
                     inning = .Ninth
+                } else if inning == .Ninth{
+                    //game over logic here
                 }
             }
         } else {
